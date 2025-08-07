@@ -8,7 +8,7 @@
 ### **🚀 Быстрый старт с Docker**  
 
 ```bash
-git clone git@github.com:Robosoft-MIK-2025/star-lander.git
+git clone git@github.com:Robosoft-MIK-2025/drone-code.git
 cd star-lander
 docker compose up --build <TO-DO>
 ```
@@ -24,7 +24,7 @@ docker compose up --build <TO-DO>
 
 Скачайте репозиторий и перейдидте в его корень
 ```bash
-git clone git@github.com:Robosoft-MIK-2025/star-lander.git
+git clone git@github.com:Robosoft-MIK-2025/drone-code.git
 cd star-lander
 ```
 
