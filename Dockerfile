@@ -62,6 +62,23 @@ RUN apt-get update && apt-get upgrade -y && \
     xauth \
     --fix-missing
 
+#Утановка PX4-Autopilot
+RUN apt-get update && apt-get install -y wget
+RUN cd /home/$USERNAME \
+    && git clone https://github.com/PX4/PX4-Autopilot.git --recursive \
+    && bash ./PX4-Autopilot/Tools/setup/ubuntu.sh
+RUN cd /home/$USERNAME \
+    && git clone -b v2.4.2 https://github.com/eProsima/Micro-XRCE-DDS-Agent.git \
+    && cd Micro-XRCE-DDS-Agent \
+    && sed -i '98s|2.12|2.13|' CMakeLists.txt \
+    && sed -i '99s|2.12.x|2.13.3|' CMakeLists.txt \
+    && mkdir build \
+    && cd build \
+    && cmake .. \
+    && make \
+    && sudo make install \
+    && sudo ldconfig /usr/local/lib/ 
+
 # Clean up
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
