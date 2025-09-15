@@ -1,5 +1,5 @@
 x-common: &common-setup
-  image: fabook/mik:maneuver_v0.0.1
+  image: fabook/mik:v0.0.5
   network_mode: host
   privileged: true
   volumes: 
