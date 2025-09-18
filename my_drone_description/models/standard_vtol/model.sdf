@@ -9,12 +9,12 @@
         <pose>0 0 0 0 0 0</pose>
         <mass>30</mass>
         <inertia>
-          <ixx>4.5</ixx>
+          <ixx>6.25</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>4.0</iyy>
+          <iyy>6.25</iyy>
           <iyz>0</iyz>
-          <izz>8.0</izz>
+          <izz>11.25</izz>
         </inertia>
       </inertial>
       <collision name='base_link_collision'>
@@ -760,8 +760,8 @@
       <turningDirection>ccw</turningDirection>
       <timeConstantUp>0.15</timeConstantUp>
       <timeConstantDown>0.25</timeConstantDown>
-      <maxRotVelocity>1800</maxRotVelocity>
-      <motorConstant>0.000028</motorConstant>
+      <maxRotVelocity>2500</maxRotVelocity>
+      <motorConstant>0.003</motorConstant>
       <momentConstant>0.06</momentConstant>
       <commandSubTopic>command/motor_speed</commandSubTopic>
       <motorNumber>0</motorNumber>
@@ -777,8 +777,8 @@
       <turningDirection>ccw</turningDirection>
       <timeConstantUp>0.15</timeConstantUp>
       <timeConstantDown>0.25</timeConstantDown>
-      <maxRotVelocity>1800</maxRotVelocity>
-      <motorConstant>0.000028</motorConstant>
+      <maxRotVelocity>2500</maxRotVelocity>
+      <motorConstant>0.003</motorConstant>
       <momentConstant>0.06</momentConstant>
       <commandSubTopic>command/motor_speed</commandSubTopic>
       <motorNumber>1</motorNumber>
@@ -795,8 +795,8 @@
       <turningDirection>cw</turningDirection>
       <timeConstantUp>0.15</timeConstantUp>
       <timeConstantDown>0.25</timeConstantDown>
-      <maxRotVelocity>1800</maxRotVelocity>
-      <motorConstant>0.000028</motorConstant>
+      <maxRotVelocity>2500</maxRotVelocity>
+      <motorConstant>0.003</motorConstant>
       <momentConstant>0.06</momentConstant>
       <commandSubTopic>command/motor_speed</commandSubTopic>
       <motorNumber>2</motorNumber>
@@ -813,8 +813,8 @@
       <turningDirection>cw</turningDirection>
       <timeConstantUp>0.15</timeConstantUp>
       <timeConstantDown>0.25</timeConstantDown>
-      <maxRotVelocity>1800</maxRotVelocity>
-      <motorConstant>0.000028</motorConstant>
+      <maxRotVelocity>2500</maxRotVelocity>
+      <motorConstant>0.003</motorConstant>
       <momentConstant>0.06</momentConstant>
       <commandSubTopic>command/motor_speed</commandSubTopic>
       <motorNumber>3</motorNumber>
