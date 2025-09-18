@@ -13,25 +13,7 @@ def generate_launch_description():
         "bridge.yaml"
     ])
 
-    px4_path = Path("/home/mobile/PX4-Autopilot")
-    custom_model_path = Path("/home/mobile/ros2_ws/src/my_drone_description/models/standard_vtol")
-    original_model_path = px4_path / "Tools/simulation/gz/models/standard_vtol"
-    backup_model_path = px4_path / "Tools/simulation/gz/models/standard_vtol_original"
-
-    setup_model_cmd = (
-        "if [ -d '" + str(custom_model_path) + "' ]; then "
-        "if [ ! -d '" + str(backup_model_path) + "' ]; then "
-        "mv '" + str(original_model_path) + "' '" + str(backup_model_path) + "'; fi; "
-        "ln -sf '" + str(custom_model_path) + "' '" + str(original_model_path) + "'; "
-        "fi"
-    )
-
     return LaunchDescription([
-        ExecuteProcess(
-            cmd=["bash", "-c", setup_model_cmd],
-            output="log",
-            shell=False
-        ),
         ExecuteProcess(
             cmd=["cd", "/home/mobile/PX4-Autopilot", "&&", "make", "px4_sitl", "gz_standard_vtol"],
             output="screen",
