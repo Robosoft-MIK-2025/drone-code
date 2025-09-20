@@ -760,8 +760,8 @@
       <turningDirection>ccw</turningDirection>
       <timeConstantUp>0.15</timeConstantUp>
       <timeConstantDown>0.25</timeConstantDown>
-      <maxRotVelocity>2500</maxRotVelocity>
-      <motorConstant>0.003</motorConstant>
+      <maxRotVelocity>7000</maxRotVelocity>
+      <motorConstant>0.0003</motorConstant>
       <momentConstant>0.06</momentConstant>
       <commandSubTopic>command/motor_speed</commandSubTopic>
       <motorNumber>0</motorNumber>
@@ -777,8 +777,8 @@
       <turningDirection>ccw</turningDirection>
       <timeConstantUp>0.15</timeConstantUp>
       <timeConstantDown>0.25</timeConstantDown>
-      <maxRotVelocity>2500</maxRotVelocity>
-      <motorConstant>0.003</motorConstant>
+      <maxRotVelocity>7000</maxRotVelocity>
+      <motorConstant>0.0003</motorConstant>
       <momentConstant>0.06</momentConstant>
       <commandSubTopic>command/motor_speed</commandSubTopic>
       <motorNumber>1</motorNumber>
@@ -795,8 +795,8 @@
       <turningDirection>cw</turningDirection>
       <timeConstantUp>0.15</timeConstantUp>
       <timeConstantDown>0.25</timeConstantDown>
-      <maxRotVelocity>2500</maxRotVelocity>
-      <motorConstant>0.003</motorConstant>
+      <maxRotVelocity>7000</maxRotVelocity>
+      <motorConstant>0.0003</motorConstant>
       <momentConstant>0.06</momentConstant>
       <commandSubTopic>command/motor_speed</commandSubTopic>
       <motorNumber>2</motorNumber>
@@ -813,8 +813,8 @@
       <turningDirection>cw</turningDirection>
       <timeConstantUp>0.15</timeConstantUp>
       <timeConstantDown>0.25</timeConstantDown>
-      <maxRotVelocity>2500</maxRotVelocity>
-      <motorConstant>0.003</motorConstant>
+      <maxRotVelocity>7000</maxRotVelocity>
+      <motorConstant>0.0003</motorConstant>
       <momentConstant>0.06</momentConstant>
       <commandSubTopic>command/motor_speed</commandSubTopic>
       <motorNumber>3</motorNumber>
@@ -842,5 +842,16 @@
       <motorType>velocity</motorType>
     </plugin>
     <static>0</static>
+    <plugin filename="gz-sim-linearbatteryplugin-system" name="gz::sim::systems::LinearBatteryPlugin">
+    <battery_name>vtol_battery</battery_name>
+    <voltage>22.2</voltage>               <!-- Напряжение 6S LiPo -->
+    <open_circuit_voltage_constant_coef>22.2</open_circuit_voltage_constant_coef>
+    <open_circuit_voltage_linear_coef>-3.0</open_circuit_voltage_linear_coef>
+    <initial_charge>20.0</initial_charge> <!-- Начальный заряд -->
+    <capacity>20.0</capacity>             <!-- Ёмкость 20 А*ч -->
+    <resistance>0.05</resistance>
+    <smooth_current_tau>1.0</smooth_current_tau>
+    <power_load>17.0</power_load>         <!-- Базовое потребление (Вт) -->
+    </plugin>
   </model>
 </sdf>
