@@ -25,3 +25,14 @@ services:
     tty: true        # docker run -t
     working_dir: /home/ros2_ws
     command: []
+    
+  fly:
+    <<: *common-setup
+    stdin_open: true  # dsocker run -i
+    tty: true        # docker run -t
+    working_dir: /home/ros2_ws
+    entrypoint: >
+      bash -c "
+        bash src/scripts/start.bash
+      "
+
